@@ -32,15 +32,26 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  @include flex-cc;
+body,
+#root {
   height: 100vh;
   background-color: var(--color-grey);
   }
   
-  nav {
+nav {
+  @include flex-cc;
+  background-color: var(--color-white);
+  padding: 1em;
+  margin-bottom: 1rem;
+  
+  a {
+    color: var(--color-blood);
+    padding: .5rem;
+    font-size: var(--h2);
+    text-decoration: none;
+  }
+  }
+  
+  main {
     @include flex-cc;
-    background-color: var(--color-white);
-    padding: 1em;
-    border-bottom: 1px solid var(--color-dark);
 }

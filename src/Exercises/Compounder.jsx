@@ -1,3 +1,7 @@
 export const Compounder = () => {
-  return "Compounder";
+  return (
+    <main>
+      "Compounder"
+    </main>
+  );
 }

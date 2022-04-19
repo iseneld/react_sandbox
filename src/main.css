@@ -22,16 +22,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+body,
+#root {
   height: 100vh;
   background-color: var(--color-grey);
 }
@@ -48,6 +40,25 @@ nav {
           align-items: center;
   background-color: var(--color-white);
   padding: 1em;
-  border-bottom: 1px solid var(--color-dark);
+  margin-bottom: 1rem;
+}
+
+nav a {
+  color: var(--color-blood);
+  padding: .5rem;
+  font-size: var(--h2);
+  text-decoration: none;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=main.css.map */
