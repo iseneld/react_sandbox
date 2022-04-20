@@ -21,15 +21,16 @@ export const StarRating = ({totalStars = 5}) => {
 
   return ( 
     <main>
-      { createArray(totalStars).map((n, i) => 
+      <h1>
+        { createArray(totalStars).map((n, i) => 
       <Star
         key={i} 
         // Sends true if selectedStars is greater than or equal to i.
         selected={selectedStars > i} 
         // Sets selectedStars to a value equals to the clicked star's position.
         onSelect={() => setSelectedStars(i + 1)} /> )}
-
-        <p>{selectedStars} of {totalStars}</p>
+      </h1>
+        <h2>{selectedStars} of {totalStars}</h2>
     </main>
     
   );
