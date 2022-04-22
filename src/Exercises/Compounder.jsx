@@ -19,7 +19,7 @@ export const Compounder = () => {
     <main>
       <label>
         Age: 
-        <input type="range" min="18" max="65" className="slider" id="sliderAge" 
+        <input type="range" min="18" max="64" className="slider" id="sliderAge" 
           onChange={(e) => {setAge(e.target.value)}}/>
         {age} years old
       </label>
@@ -36,8 +36,8 @@ export const Compounder = () => {
         {((returns*100)-100).toFixed(0)}%
       </label>
       
-      <h1>{resultMkr(40)} MKr at 40</h1>
-      <h1>{resultMkr(50)} MKr at 50</h1>
+      <h1>{resultMkr(40) > 0 ? resultMkr(40) + "MKr at 40" : null}</h1>
+      <h1>{resultMkr(50) > 0 ? resultMkr(50) + "MKr at 50" : null}</h1>
       <h1>{resultMkr(65)} MKr at 65</h1>
       
     </main>
