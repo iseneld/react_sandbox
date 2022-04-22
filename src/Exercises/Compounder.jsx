@@ -3,6 +3,8 @@ import { birthdayCalculator, birthCalculatorYears } from "../Helpers/birthday";
 
 export const Compounder = () => {
   const [age, setAge] = useState(33);
+  const [myAge, setMyage] = useState(birthCalculatorYears());
+  const [myCompound, setMycompound] = useState(1);
   const [savings, setSavings] = useState(1000);
   const [need, setNeed] = useState(1000);
   const [returns, setReturns] = useState(1.04);
@@ -12,6 +14,11 @@ export const Compounder = () => {
       let compounded = Math.pow(returns, (65-age));
       setCompound(compounded);
   }, [compound, returns, age]);
+
+    useEffect(() => {
+      let compounded = Math.pow(returns, (65-myAge));
+      setMycompound(compounded);
+  }, [compound, returns, myAge]);
 
   function needMkr(need) {
     return ((((need*12)*(73.2-age)))/1000000).toFixed(2)
@@ -23,7 +30,7 @@ export const Compounder = () => {
 
   function resultMkr2(years) {
     let ager = birthCalculatorYears();
-    return ((((savings*12)*(years-ager))*compound)/1000000).toFixed(2)
+    return ((((savings*12)*(years-ager))*myCompound)/1000000).toFixed(2)
   } 
 
   function toDays(years) {
