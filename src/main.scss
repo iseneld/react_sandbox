@@ -60,3 +60,8 @@ main {
   input {
     margin: 1rem;
 }
+section {
+  @include flex-cc;
+  flex-direction: column;
+  padding: 2rem;
+}
