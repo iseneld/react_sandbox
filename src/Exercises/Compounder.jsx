@@ -13,13 +13,23 @@ export const Compounder = () => {
       setCompound(compounded);
   }, [compound, returns, age]);
 
+  function needMkr(need) {
+    return ((((need*12)*(73.2-age)))/1000000).toFixed(2)
+  } 
+
   function resultMkr(years) {
     return ((((savings*12)*(years-age))*compound)/1000000).toFixed(2)
   } 
 
-   function needMkr(need) {
-    return ((((need*12)*(73.2-age)))/1000000).toFixed(2)
+  function resultMkr2(years) {
+    let ager = birthCalculatorYears();
+    return ((((savings*12)*(years-ager))*compound)/1000000).toFixed(2)
   } 
+
+  function toDays(years) {
+    return (years * 365);
+  }
+  
 
   return (
     <main>
@@ -65,6 +75,11 @@ export const Compounder = () => {
       <section>
         <h1>{birthdayCalculator() + ` days since I was born`}</h1>
         <h1>{`I am ` + birthCalculatorYears() + ` old!`}</h1>
+        <h1>{`~` + (toDays(81.69) - birthdayCalculator()).toFixed(0) + ` days to death`}</h1>
+
+        <h1>{resultMkr2(40) > 0 ? resultMkr2(40) + "MKr at 40" : null}</h1>
+        <h1>{resultMkr2(50) > 0 ? resultMkr2(50) + "MKr at 50" : null}</h1>
+        <h1>{resultMkr2(65)} MKr at 65</h1>
       </section>
     </main>
   );

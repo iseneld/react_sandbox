@@ -60,8 +60,12 @@ main {
   input {
     margin: 1rem;
 }
+
 section {
   @include flex-cc;
   flex-direction: column;
   padding: 2rem;
+  h1 {
+    margin-bottom: .5rem;
+  }
 }
