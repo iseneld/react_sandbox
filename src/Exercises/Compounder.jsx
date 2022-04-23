@@ -13,6 +13,7 @@ export const Compounder = () => {
   useEffect(() => {
       let compounded = Math.pow(returns, (65-age));
       setCompound(compounded);
+      document.title = "Compounder";
   }, [compound, returns, age]);
 
     useEffect(() => {
@@ -30,7 +31,8 @@ export const Compounder = () => {
 
   function resultMkr2(years) {
     let ager = birthCalculatorYears();
-    return ((((savings*12)*(years-ager))*myCompound)/1000000).toFixed(2)
+    let alreadySaved = 0.662;
+    return ((((savings*12)*(years-ager))*myCompound)/1000000+alreadySaved).toFixed(2)
   } 
 
   function toDays(years) {
@@ -80,9 +82,9 @@ export const Compounder = () => {
       </section>
 
       <section>
-        <h1>{birthdayCalculator() + ` days since I was born`}</h1>
         <h1>{`I am ` + birthCalculatorYears() + ` old!`}</h1>
-        <h1>{`~` + (toDays(81.69) - birthdayCalculator()).toFixed(0) + ` days to death`}</h1>
+        <h1>{birthdayCalculator() + ` days since I was born`}</h1>
+        <h1>{`~` + (toDays(81.69) - birthdayCalculator()).toFixed(0) + ` days to statistical death`}</h1>
 
         <h1>{resultMkr2(40) > 0 ? resultMkr2(40) + "MKr at 40" : null}</h1>
         <h1>{resultMkr2(50) > 0 ? resultMkr2(50) + "MKr at 50" : null}</h1>

@@ -1,7 +1,7 @@
 
 // Exercise made in: https://www.linkedin.com/learning-login/share?account=37488348&forceAccount=false&redirect=https%3A%2F%2Fwww.linkedin.com%2Flearning%2Freact-hooks%2Fsending-interactions-up-component-trees%3Ftrk%3Dshare_video_url%26shareId%3DV57MAj0pSaGnmnNb7obt7g%253D%253D
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FaStar } from 'react-icons/fa'
 
 // Creates an empty array that is {length} long.
@@ -18,6 +18,10 @@ const Star = ( {selected = false, onSelect} ) => (
 // Creates row of stars thats {totalStars} long.
 export const StarRating = ({totalStars = 5}) => { 
   const [selectedStars, setSelectedStars] = useState(0);
+
+  useState(() => {
+    document.title = "Star Rating"
+  }, []);
 
   return ( 
     <main>
