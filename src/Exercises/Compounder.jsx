@@ -3,7 +3,7 @@ import { birthdayCalculator, birthCalculatorYears } from "../Helpers/birthday";
 
 export const Compounder = () => {
   const [age, setAge] = useState(33);
-  const [myAge, setMyage] = useState(birthCalculatorYears());
+  const [myAge] = useState(birthCalculatorYears());
   const [myCompound, setMycompound] = useState(1);
   const [savings, setSavings] = useState(1000);
   const [need, setNeed] = useState(1000);
