@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { birthdayCalculator, birthCalculatorYears } from "../Helpers/birthday";
+import { birthdayCalculator, birthCalculatorYears } from "../../Helpers/birthday";
+import "./compounder-style.css";
 
 export const Compounder = () => {
   const [age, setAge] = useState('33');

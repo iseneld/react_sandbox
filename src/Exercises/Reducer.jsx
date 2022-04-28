@@ -3,7 +3,7 @@ import { useReducer } from 'react';
 
 export const Reducer = () => { 
   const [number, setNumber] = useReducer(
-    (number, newValue) => number * newValue, 
+    (number, newValue) => number + newValue, 
     0
   );
 
