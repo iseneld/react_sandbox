@@ -22,14 +22,20 @@ let entries =
   }
 
 export const Budget = () => {
+  console.log(entries);
+
   return (
     <main>
       <section>
-        <ol>
+        <tr>
+          <td>Year 2021</td>
           {entries[2021].map((entry) => {
-          return <li> {entry} </li>
+          return <td> {entry} </td>
         })}
-        </ol>
+        </tr>
+        <table>
+          
+        </table>
       </section>
     </main>
   );
