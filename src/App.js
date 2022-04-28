@@ -4,6 +4,7 @@ import { Home } from "./Home";
 import { Compounder } from "./Exercises/Compounder";
 import { Reducer } from "./Exercises/Reducer";
 import { StarRating } from "./Exercises/StarRating";
+import { Budget } from "./Exercises/Budget";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/star-rating" element={<StarRating totalStars={10} />} />
         <Route path="/compounder" element={<Compounder />} />
         <Route path="/reducer" element={<Reducer />} />
+        <Route path="/budget" element={<Budget />} />
       </Routes>
     </>
   );

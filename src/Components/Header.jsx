@@ -7,7 +7,7 @@ export const Header = () => (
       <Link to="/compounder">Compounder</Link>
       <Link to="/reducer">Reducer</Link>
       <Link to="/star-rating">Stars</Link>
-      
+      <Link to="/budget">Budget</Link>
     </nav>
   </header>
 )
