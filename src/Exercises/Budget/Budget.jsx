@@ -22,19 +22,35 @@ let entries =
   }
 
 export const Budget = () => {
-  console.log(entries);
+  let currentVale = 0;
+  let previousValue = 0;
 
   return (
     <main>
       <section>
-        <tr>
-          <td>Year 2021</td>
-          {entries[2021].map((entry) => {
-          return <td> {entry} </td>
-        })}
-        </tr>
         <table>
-          
+          <tr>
+            <th>2021</th>
+            {entries[2021].map((entry) => {
+              return <td> {entry} </td>
+            })}
+            {/* <td>
+              <strong>
+                {entries[2021].reduce((acc, curr) => {
+                  return acc + curr;
+                })}
+              </strong>
+            </td> */}
+          </tr>
+          <tr>
+            <th>Profit</th>
+            {entries[2021].map((entry) => {
+              previousValue = currentVale;
+              currentVale = entry;
+              let print = currentVale - previousValue;
+              return <td className={print > 10000 ? "green" : ""}> {print} </td>
+            })}
+          </tr>
         </table>
       </section>
     </main>

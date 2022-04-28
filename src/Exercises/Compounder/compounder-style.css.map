@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,IAAI,CAAC;EACH,gBAAgB,EAAE,mBAAmB;CACtC",
+    "mappings": "",
     "sources": [
         "compounder-style.scss"
     ],
